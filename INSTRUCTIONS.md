@@ -1,5 +1,10 @@
+# Instructions
+
+## Credits
 These instructions are more or less adapted from: [here](http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/)
 
+
+## Installing the required yum packages
 
 Update the repository, and install the required development toos.  
 We need git to retrieve git repo, and gcc is needed by python-pip 
@@ -52,6 +57,9 @@ Run the script now so we can use Pyton 2.7
 source /opt/rh/python27/enable
 ```
 
+
+## Install the packages from PyPI via PIP
+
 Update the default pip to the lastest
 
 ```
@@ -63,7 +71,7 @@ Update the virtualenv package so it will use the latest pip when creating new vi
 ```
 pip install --upgrade virtualenv
 ```
-
+### Install python-virtualenvwrapper
 Install virtualenvwrapper so it is easier to work with virtualenv
 
 ```
@@ -82,6 +90,7 @@ Run it now, so if you want to use it
 source `which virtualenvrwapper.sh`
 ```
 
+### Install python-supervisor
 Install the supervisor package, that will run the gunicorn server/s
 
 ```
@@ -136,6 +145,8 @@ Make sure that it start automatically
 chkconfig nginx --levels 2345 on
 ```
 
+## Setup system user and group
+
 Create group and user that will be running the django projects
 
 ```
@@ -150,6 +161,8 @@ mkdir /webapps
 cp ~/.bash* /webapps
 chown -R django:webapps $_
 ```
+
+## Setup helper script
 
 Switch to user 'django'
 
@@ -176,10 +189,21 @@ echo "OLDPATH=$PATH" >> .bashrc
 echo "export PATH=/webapps/bin:$OLDPATH" >>> .bashrc
 ```
 
-Exit and switch back to django to enable the above changes, if needed exit su - django
+Exit and switch back to django to enable the above changes, if needed 
 
-DONE! Great!
+```
+exit 
+su - django
+```
 
-NB: Make sure to install mysql-python (`pip install mysql-python`) if you need to need to access mysql servers.
 
-(url_source)[<http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/>]
+## Finally
+
+We are DONE! Great!
+
+
+*NB:* 
+  o Make sure to install mysql-python (`pip install mysql-python`) if you need to need to access mysql servers.
+  o Make sure to install gunicorn, usually together with django, e.g., ```pip install django gunicorn```.
+  
+ 
