@@ -203,7 +203,7 @@ We are DONE! Great!
 
 
 *NB:* 
-  o Make sure to install mysql-python (`pip install mysql-python`) if you need to need to access mysql servers.
-  o Make sure to install gunicorn, usually together with django, e.g., ```pip install django gunicorn```.
+* Make sure to install mysql-python (`pip install mysql-python`) if you need to need to access mysql servers.
+* Make sure to install gunicorn, usually together with django, e.g., ```pip install django gunicorn```.
   
  
