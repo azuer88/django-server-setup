@@ -1,5 +1,9 @@
 These instructions are more or less adapted from: [here](http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/)
 
+
+Update the repository, and install the required development toos.  
+We need git to retrieve git repo, and gcc is needed by python-pip 
+to compile some of its packages.
 ```
 yum update -y
 yum groupinstall -y 'development tools'
