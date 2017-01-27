@@ -205,5 +205,7 @@ We are DONE! Great!
 *NB:* 
 * Make sure to install mysql-python (`pip install mysql-python`) if you need to need to access mysql servers.
 * Make sure to install gunicorn, usually together with django, e.g., ```pip install django gunicorn```.
-  
+* You can run ```make_webapp.py <django_project_name> <FQDN>``` after you create the django project
+* Make sure to name the virtualenv the same as your django project name.
+
  
