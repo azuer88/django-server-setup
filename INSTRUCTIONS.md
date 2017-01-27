@@ -1,4 +1,4 @@
-These instructions are more or less adapted from: [here](url_source)
+These instructions are more or less adapted from: [here](http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/)
 
 ```
 yum update -y
