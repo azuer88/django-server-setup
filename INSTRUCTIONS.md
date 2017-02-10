@@ -36,7 +36,8 @@ yum install -y python27
 Setup python libraries for ldconfig
 
 ```
-echo "/opt/rh/python27/root/usr/lib64" > /etc/ld.so.conf.d/python27.conf ldconfig
+echo "/opt/rh/python27/root/usr/lib64" > /etc/ld.so.conf.d/python27.conf 
+ldconfig
 ```
 
 Setup mysql support for installing mysql-python via pip, to allow django to access mysql servers
